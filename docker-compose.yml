@@ -9,3 +9,5 @@ services:
       nofile:
         soft: 20000
         hard: 40000
+    ports:
+      - "24224:24224"
