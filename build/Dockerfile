@@ -31,5 +31,5 @@ EXPOSE ${PORT}
 
 USER fluent
 WORKDIR ${WORK_DIR}
-ENTRYPOINT ["render","/fluentd/etc/fluent.conf", "--","switch","shell=/bin/bash","--", "exec fluentd -c /fluentd/etc -p /fluentd/plugins/ OPT"]
+ENTRYPOINT ["render","/fluentd/etc/fluent.conf", "--", "switch", "shell=/bin/bash", "--", "fluentd", "-c", "/fluentd/etc/fluent.conf", "-p", "/fluentd/plugins"]
 #CMD ["/bin/bash"]

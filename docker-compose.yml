@@ -11,3 +11,4 @@ services:
         hard: 40000
     ports:
       - "24224:24224"
+    stdin_open: true
