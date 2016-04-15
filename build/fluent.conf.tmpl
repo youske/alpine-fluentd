@@ -13,8 +13,8 @@
   <match docker.**>
     @type file
     @id output_docker1
-    path /fluentd/log/docker.*.log
-    symlink_path /fluentd/log/docker.log
+    path /fluentdlog/docker.*.log
+    symlink_path /fluentdlog/docker.log
     append true
     time_slice_format %Y%m%
     time_slice_wait 1m
@@ -23,8 +23,8 @@
   <match **>
     @type file
     @id output1
-    path /fluentd/log/data.*.log
-    symlink_path /fluentd/log/data.log
+    path /fluentdlog/data.*.log
+    symlink_path /fluentdlog/data.log
     append true
     time_slice_format %Y%m%
     time_slice_wait 10m

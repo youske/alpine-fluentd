@@ -9,6 +9,19 @@ services:
       nofile:
         soft: 20000
         hard: 40000
+    volumes:
+      - logger:/fluentdlog
+    networks:
+      - omni
     ports:
       - "24224:24224"
     stdin_open: true
+
+volumes:
+  logger:
+    driver: local
+
+networks:
+  omni:
+    external:
+      name: omni-network
